@@ -1,0 +1,14 @@
+
+CREATE TABLE student (
+  id bigint NOT NULL,
+  dateOfBirth date NOT NULL,
+  emailAddress varchar(255) NOT NULL,
+  firstName varchar(255) NOT NULL,
+  lastName varchar(255) NOT NULL,
+  password varchar(8) NOT NULL,
+  userName varchar(20) NOT NULL,
+  PRIMARY KEY (id)
+)   
+-- script  
+create sequence hibernate_sequence;       
+
