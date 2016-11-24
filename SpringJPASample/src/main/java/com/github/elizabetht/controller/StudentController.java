@@ -52,12 +52,13 @@ public class StudentController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String login(@Valid @ModelAttribute("studentLogin") StudentLogin studentLogin, BindingResult result) {
+	public String login(@Valid @ModelAttribute("studentLogin") StudentLogin studentLogin, BindingResult result,Model model) {
 		if (result.hasErrors()) {
 			return "login";
 		} else {
 			boolean found = studentService.findByLogin(studentLogin.getUserName(), studentLogin.getPassword());
-			if (found) {				
+			if (found) {		
+				model.addAttribute("name", studentLogin.getUserName());
 				return "success";
 			} else {				
 				return "failure";
@@ -65,4 +66,10 @@ public class StudentController {
 		}
 		
 	}
+	
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public String logout() {
+		return "login";
+	}
+	
 }

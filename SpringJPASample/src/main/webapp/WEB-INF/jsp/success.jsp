@@ -36,7 +36,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/SpringJPASample">Home</a></li>
 				<li><a href="signup.html">Signup</a></li>
-				<li class="active"><a href="login.html">Login</a></li>
+				<li class="active"><a href="login.html">Logout</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown">Explore<b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -59,7 +59,7 @@
 		<div class="panel-body">
 		<div class="alert alert-dismissable alert-success">
               <button type="button" class="close" data-dismiss="alert">×</button>
-              <strong>Well done!</strong> You successfully logged-into the system. 
+              <strong>Well done! <%=request.getAttribute("name")%> </strong> You successfully logged-into the system. 
               Now you can explore the complete features!
             </div>
 		</div>
