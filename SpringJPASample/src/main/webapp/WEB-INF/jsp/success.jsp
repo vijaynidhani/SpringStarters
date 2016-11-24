@@ -59,7 +59,7 @@
 		<div class="panel-body">
 		<div class="alert alert-dismissable alert-success">
               <button type="button" class="close" data-dismiss="alert">×</button>
-              <strong>Well done! <%=request.getAttribute("name")%> </strong> You successfully logged-into the system. 
+              <strong>Well done! <%=((String)request.getAttribute("name")).toUpperCase()%> </strong> You successfully logged-into the system. 
               Now you can explore the complete features!
             </div>
 		</div>
