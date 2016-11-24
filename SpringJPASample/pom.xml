@@ -150,6 +150,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	<artifactId>SpringJPASample</artifactId>
+	<artifactId>StudentEnrollment</artifactId>
 	<version>Nightly</version>
 </project>
