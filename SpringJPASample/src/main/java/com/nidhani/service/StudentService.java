@@ -1,6 +1,6 @@
-package com.github.elizabetht.service;
+package com.nidhani.service;
 
-import com.github.elizabetht.model.Student;
+import com.nidhani.model.Student;
 
 public interface StudentService {
 	Student save(Student student);

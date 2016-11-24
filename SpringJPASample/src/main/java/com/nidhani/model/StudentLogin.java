@@ -1,4 +1,4 @@
-package com.github.elizabetht.model;
+package com.nidhani.model;
 
 import javax.validation.constraints.Size;
 
