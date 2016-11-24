@@ -59,6 +59,8 @@ public class StudentController {
 			boolean found = studentService.findByLogin(studentLogin.getUserName(), studentLogin.getPassword());
 			if (found) {		
 				model.addAttribute("name", studentLogin.getUserName());
+				// TODO Create user session bean and add it to the session. 
+				
 				return "success";
 			} else {				
 				return "failure";
@@ -69,6 +71,8 @@ public class StudentController {
 	
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public String logout() {
+		// TODO Remove User session bean and add it to the session.
+
 		return "login";
 	}
 	
