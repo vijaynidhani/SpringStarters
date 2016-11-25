@@ -30,10 +30,13 @@ public class ServiceTest {
 	   
 	   @Test
 	   public void getItemNumber() {
+		   
 		   Student mockedStudent=new Student();
 		   mockedStudent.setUserName("vijay");
 		   mockedStudent.setPassword("dhiman");
+		   
 		   when(studentRepository.findByUserName("vijay")).thenReturn(mockedStudent);
+		   
 		   boolean result=studentService.findByLogin("vijay", "dhiman");
 		   verify(studentRepository,times(1)).findByUserName("vijay");
 		   assertTrue(result);

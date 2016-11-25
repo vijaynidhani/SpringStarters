@@ -17,6 +17,7 @@ public class UserSession {
 	private User user;
 	
    	private Date lastLogin;
+   	
    	private Date loginTime;
    	
    	public UserSession() {
