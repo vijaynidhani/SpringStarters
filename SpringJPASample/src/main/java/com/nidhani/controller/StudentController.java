@@ -81,8 +81,10 @@ public class StudentController {
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public String logout(HttpSession session) {
 		// TODO Remove User session bean and add it to the session.
+		log.info("Logging out... User Session value : "+userSession);
 	    session.invalidate();
-		return "login";
+	    log.info("Logging out... User Session value : "+userSession);
+	    return "redirect:login.html";
 	}
 	
 }

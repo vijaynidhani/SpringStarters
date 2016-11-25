@@ -24,5 +24,11 @@ public class User {
 	}
 
 	private List<String> role;
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getName();
+	}
 
 }

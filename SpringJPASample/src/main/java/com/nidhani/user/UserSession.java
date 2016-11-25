@@ -42,5 +42,11 @@ public class UserSession {
 	public void setLastLogin(Date lastLogin) {
 		this.lastLogin = lastLogin;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return user.toString() +" : "+  getLoginTime();
+	}
    	
 }
