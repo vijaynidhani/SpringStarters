@@ -82,8 +82,7 @@ public class StudentController {
 	public String logout(HttpSession session) {
 		// TODO Remove User session bean and add it to the session.
 		log.info("Logging out... User Session value : "+userSession);
-	    session.invalidate();
-	    log.info("Logging out... User Session value : "+userSession);
+	    session.invalidate(); 
 	    return "redirect:login.html";
 	}
 	
