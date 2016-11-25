@@ -1,5 +1,8 @@
 package com.nidhani.aspects;
 
+import javax.persistence.JoinTable;
+
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -14,8 +17,9 @@ public class ControllerAspects {
 	
 	
 	@Before("execution(* com.nidhani..*.*(..))") 
-    public void before() {
-		log.info("Before method Execution .........");
+    public void before(JoinPoint joinPoint) {
+		 log.info("Before method Execution ........."+joinPoint);
+		 
     } 	
 }
 
